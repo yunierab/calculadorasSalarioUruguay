@@ -1,4 +1,3 @@
-import { ContentFormDataComponent } from './../componentes/content-form-data/content-form-data.component';
 export class DataForm
 {
   salarioNominal: number;  // Salario nominal
