@@ -7,16 +7,27 @@
   <form class="form">
     <div class="form-grid">
           <label for="inputSalarioNominal" class="col-form-label">Salario nominal en pesos:</label>&nbsp;
-          <input id="inputSalarioNominal" name="inputSalarioNominal" class="form-input text-end" type="number" min="0" value="0">
+          <input id="inputSalarioNominal" name="inputSalarioNominal" class="form-input text-end borderElement" type="number" min="0" value="0">
     </div>
     <br>
     <h4>Cálculo de aportes BPS</h4>
-    <div class="form-grid">
-      <label for="inputHijosACargo" class="col-form-label">¿Tiene hijos a cargo?</label>&nbsp;
-      <input type="checkbox" id="hijosACargo" name="inputHijosACargo" class="form-input"><br>
-      <label for="inputConyugueACargo" class="col-form-label">¿Tiene cónyugue a cargo?</label>&nbsp;
-      <input type="checkbox" id="conyugueACargo" name="inputConyugueACargo" class="form-input">
-    </div>
-  </form>
 
+    <div class="container center-content radiosCentrados">
+      <div class="form-check">
+        <input class="form-check-input borderElement" type="checkbox" value="" id="flexCheckHijosACargo">
+        <label class="form-check-label" for="flexCheckHijosACargo">
+          ¿Tiene hijos a cargo?
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input borderElement" type="checkbox" value="" id="flexCheckConyugueACargo">
+        <label class="form-check-label" for="flexCheckConyugueACargo">
+          ¿Tiene cónyuge a cargo?
+        </label>
+      </div>
+    </div>
+
+
+
+  </form>
 </main>
