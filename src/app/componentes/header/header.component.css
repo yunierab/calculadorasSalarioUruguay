@@ -2,3 +2,10 @@
   /* background-color: rgb(1, 47, 109);*/
   background-color: #004CFD;
 }
+
+h4{
+  color:white;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  padding-right: 23em;
+}

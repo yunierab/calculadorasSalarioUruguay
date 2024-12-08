@@ -1,4 +1,4 @@
-h3,h4 {
+h3,h4,h5,h6 {
   color:#004CFD;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
@@ -31,6 +31,14 @@ main {
 }
 
 .radiosCentrados {
-padding-left: 7em;
+padding-left: 16em;
 }
 
+.divPersonasCargo {
+  border: none;
+  padding-right: 10em;
+}
+
+.anchoSelectDeduccion {
+  width: 12em;
+}
