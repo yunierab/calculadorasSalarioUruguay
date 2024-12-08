@@ -8,7 +8,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-   /* Centra verticalmente height: 50vh;*/
 }
 
 .form {
@@ -42,3 +41,40 @@ padding-left: 16em;
 .anchoSelectDeduccion {
   width: 12em;
 }
+
+.divCantHijosSinDiscapacidad {
+  padding-right: 3.6em;
+}
+
+.anchoInputCantidadHijosSinDiscapacidad
+{
+  width: 11.9em;
+}
+
+.divCantHijosConDiscapacidad {
+  padding-right: 3.9em;
+}
+
+.tituloSiEsProfesional {
+  margin-block-start: 1em
+}
+
+.divAportaFondoSolidaridad {
+  border: none;
+  padding-right: 3em;
+}
+
+.divAporteMensualCajaNotarial {
+  padding-right: 6.2em;
+}
+
+.divOtrasDeducciones {
+  padding-left: 3.2em;
+}
+
+.botonCalcular {
+   margin-block-start: -1em;
+   background-color: #004CFD;
+   color: white;
+}
+

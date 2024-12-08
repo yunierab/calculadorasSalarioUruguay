@@ -4,21 +4,30 @@
   <form class="form">
     <div class="form-grid">
           <label for="inputSalarioNominal" class="col-form-label">Salario nominal en pesos:</label>&nbsp;
-          <input id="inputSalarioNominal" name="inputSalarioNominal" class="form-input text-end borderElement" type="number" min="0" value="0">
+          <input id="inputSalarioNominal"
+                  name="inputSalarioNominal"
+                  class="form-input text-end borderElement"
+                  type="number" min="0" value="0"
+                  [(ngModel)]="inputSalarioNominal"
+                  >
     </div>
     <br>
     <h4>Cálculo de aportes BPS</h4>
 
     <div class="container center-content radiosCentrados">
       <div class="form-check">
-        <input class="form-check-input borderElement" type="checkbox" value="" id="flexCheckHijosACargo">
-        <label class="form-check-label" for="flexCheckHijosACargo">
+        <input class="form-check-input borderElement" type="checkbox"
+               value="" id="inputCheckHijosACargo" name="inputCheckHijosACargo"
+              [(ngModel)]="inputCheckHijosACargo">
+        <label class="form-check-label" for="inputCheckHijosACargo">
           ¿Tiene hijos a cargo?
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input borderElement" type="checkbox" value="" id="flexCheckConyugueACargo">
-        <label class="form-check-label" for="flexCheckConyugueACargo">
+        <input class="form-check-input borderElement" type="checkbox"
+         value="" id="inputCheckConyugueACargo" name="inputCheckConyugueACargo"
+         [(ngModel)]="inputCheckConyugueACargo">
+        <label class="form-check-label" for="inputCheckConyugueACargo">
           ¿Tiene cónyuge a cargo?
         </label>
       </div>
@@ -27,14 +36,72 @@
     <h4>Cálculo de IRPF</h4>
     <h5>Cantidad de personas a cargo:</h5>
     <div class="divPersonasCargo">
-      <label for="inputDeduccionPersonasCargo" class="col-form-label">Porcentaje de deducción de las personas a cargo:</label>&nbsp;
-      <select class="text-end borderElement anchoSelectDeduccion" name="inputDeduccionPersonasCargo">
+      <label for="inputPorcientoDeduccionPersonasCargo" class="col-form-label">Porcentaje de deducción de las personas a cargo:</label>&nbsp;
+      <select class="text-end borderElement anchoSelectDeduccion" name="inputPorcientoDeduccionPersonasCargo" [(ngModel)]="inputPorcientoDeduccionPersonasCargo">
         <option selected value="0">No deducción</option>
         <option value="50">50%</option>
         <option value="100">100%</option>
       </select>
     </div>
 
+    <div class="form-grid divCantHijosSinDiscapacidad">
+      <label for="inputCantidadHijosSinDiscapacidad" class="col-form-label">Cantidad de hijos sin discapacidad:</label>&nbsp;
+      <input id="inputCantidadHijosSinDiscapacidad"
+              name="inputCantidadHijosSinDiscapacidad"
+              class="form-input text-end borderElement anchoInputCantidadHijosSinDiscapacidad"
+              type="number" min="0" value="0"
+              [(ngModel)]="inputCantidadHijosSinDiscapacidad"
+              >
+    </div>
+    <div class="form-grid divCantHijosConDiscapacidad">
+        <label for="inputCantidadHijosConDiscapacidad" class="col-form-label">Cantidad de hijos con discapacidad:</label>&nbsp;
+        <input id="inputCantidadHijosConDiscapacidad"
+                name="inputCantidadHijosConDiscapacidad"
+                class="form-input text-end borderElement anchoInputCantidadHijosSinDiscapacidad"
+                type="number" min="0" value="0"
+                [(ngModel)]="inputCantidadHijosConDiscapacidad"
+                >
+    </div>
+    <h5 class="tituloSiEsProfesional">Si es profesional:</h5>
+    <div class="divAportaFondoSolidaridad">
+      <label for="inputAportaFondoSolidaridad" class="col-form-label">¿Aporta al Fondo de Solidaridad?</label>&nbsp;
+      <select class="text-end borderElement anchoSelectDeduccion" name="inputAportaFondoSolidaridad" [(ngModel)]="inputAportaFondoSolidaridad">
+        <option selected value="0">No</option>
+        <option value="0.5">1/2 BPC</option>
+        <option value="1">1 BPC</option>
+        <option value="2">2 BPC</option>
+      </select>
+    </div>
+    <div class="container center-content radiosCentrados">
+    <div class="form-check">
+      <input class="form-check-input borderElement" type="checkbox" value="" id="inputCheckAdicionalFondoSolidaridad"
+              name="inputCheckAdicionalFondoSolidaridad"
+              [(ngModel)]="inputCheckAdicionalFondoSolidaridad">
+      <label class="form-check-label" for="inputCheckAdicionalFondoSolidaridad">
+        ¿Adicional Fondo de Solidaridad?
+      </label>
+    </div>
+  </div>
+
+  <div class="form-grid divAporteMensualCajaNotarial">
+    <label for="inputAporteMensualCajaNotarial" class="col-form-label">Aporte mensual a CJPPU o Caja Notarial:</label>&nbsp;
+    <input id="inputAporteMensualCajaNotarial"
+            name="inputAporteMensualCajaNotarial"
+            class="form-input text-end borderElement anchoInputCantidadHijosSinDiscapacidad"
+            type="number" min="0" value="0"
+            [(ngModel)]="inputAporteMensualCajaNotarial"
+            >
+  </div>
+  <div class="form-grid divOtrasDeducciones">
+    <label for="inputOtrasDeducciones" class="col-form-label">Otras deducciones:</label>&nbsp;
+    <input id="inputOtrasDeducciones"
+            name="inputOtrasDeducciones"
+            class="form-input text-end borderElement anchoInputCantidadHijosSinDiscapacidad"
+            type="number" min="0" value="0"
+            [(ngModel)]="inputOtrasDeducciones"
+            >
+  </div><br>
+  <button class="btn botonCalcular" (click)="mostrarDatosFormulario()">Calcular</button>
 
   </form>
 </main>
